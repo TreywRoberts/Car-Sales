@@ -31,7 +31,7 @@ export const initialState = {
         case REMOVE_ITEM:
             return {
                 ...state,
-                car: {...state.car, features: state.car.features.filter(feature => feature.id !== action.id) },
+                car: {...state.car, features: state.car.features.filter(feature => feature.id !== action.payload.id) },
                 additionalFeatures:[...state.additionalFeatures, action.payload],
                 additionalPrice: state.additionalPrice - action.payload.price
             }

@@ -29,4 +29,9 @@ const mapStateToProps=state=>{
   return state
 }
 
-export default connect(mapStateToProps, {addItem, removeItem})(App);
+const mapActionToProps = {
+  addItem,
+  removeItem
+}
+
+export default connect(mapStateToProps, mapActionToProps)(App);
