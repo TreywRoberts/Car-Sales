@@ -1,4 +1,5 @@
 import React from 'react';
+import { addItem } from '../actions/carAction';
 
 import AddedFeature from './AddedFeature';
 
@@ -9,7 +10,7 @@ const AddedFeatures = props => {
       {props.car.features.length ? (
         <ol type="1">
           {props.car.features.map(item => (
-            <AddedFeature key={item.id} feature={item} />
+            <AddedFeature key={item.id} feature={item} removeItem={props.removeItem} />
           ))}
         </ol>
       ) : (
